@@ -1,0 +1,162 @@
+<section class="main">
+  <div class="container">
+    <header class="header">
+      <div class="logo">
+        <img src="assets/images/logo.png" alt="logo" height="13" width="114">
+      </div>
+      <nav class="main__menu" id="menu">
+        <div class="close">
+          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+               viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M300.188,246L484.14,62.04c5.06-5.064,7.852-11.82,7.86-19.024c0-7.208-2.792-13.972-7.86-19.028L468.02,7.872
+			c-5.068-5.076-11.824-7.856-19.036-7.856c-7.2,0-13.956,2.78-19.024,7.856L246.008,191.82L62.048,7.872
+			c-5.06-5.076-11.82-7.856-19.028-7.856c-7.2,0-13.96,2.78-19.02,7.856L7.872,23.988c-10.496,10.496-10.496,27.568,0,38.052
+			L191.828,246L7.872,429.952c-5.064,5.072-7.852,11.828-7.852,19.032c0,7.204,2.788,13.96,7.852,19.028l16.124,16.116
+			c5.06,5.072,11.824,7.856,19.02,7.856c7.208,0,13.968-2.784,19.028-7.856l183.96-183.952l183.952,183.952
+			c5.068,5.072,11.824,7.856,19.024,7.856h0.008c7.204,0,13.96-2.784,19.028-7.856l16.12-16.116
+			c5.06-5.064,7.852-11.824,7.852-19.028c0-7.204-2.792-13.96-7.852-19.028L300.188,246z"/>
+	</g>
+</g>
+</svg>
+        </div>
+        <ul class="main__menu-list">
+          <li class="main__menu-item">
+            <a href="#" class="main__menu-link" (click)="scrollTo(choose)">Пироженки</a>
+          </li>
+          <li class="main__menu-item">
+            <a href="#" class="main__menu-link" (click)="scrollTo(about)">О нас</a>
+          </li>
+          <li class="main__menu-item">
+            <a href="#" class="main__menu-link" (click)="scrollTo(order)">Оформить заказ</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="main__contacts">
+        +375 (29) 368-98-68
+      </div>
+      <div class="burger" id="burger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="22" viewBox="0 0 40 22">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #821328;
+              }
+            </style>
+          </defs>
+          <rect id="Прямоугольник_8" data-name="Прямоугольник 8" class="cls-1" width="40" height="2"/>
+          <rect id="Прямоугольник_8_копия" data-name="Прямоугольник 8 копия" class="cls-1" y="10" width="40"
+                height="2"/>
+          <rect id="Прямоугольник_8_копия_2" data-name="Прямоугольник 8 копия 2" class="cls-1" y="20" width="40"
+                height="2"/>
+        </svg>
+      </div>
+    </header>
+    <div class="main__block">
+      <div class="main__description">
+        <h1 class="main__title">
+          Мягкие французские
+          пироженки Macaroons
+        </h1>
+        <div class="main__description-text">
+          Побалуйте себя и своих близких самыми вкусными и ароматными домашними пироженками Macaroon!
+        </div>
+        <div class="main__action">
+          <button class="btn main__btn" (click)="scrollTo(choose)">Выбрать макарун</button>
+        </div>
+      </div>
+      <div class="main__image">
+        <img src="assets/images/macaroons.png" class="main__image-img" alt="Macaroons">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="container">
+    <div class="about__description">
+      <div class="about__description-info" #about>
+        <h2 class="description-title about__description-title">Мы печём для вас
+          вкуснейшие макаруны
+          уже более 10 лет</h2>
+        <p class="about__description-text">Все пироженки мы готовим только из натуральных и качественных
+          продуктов,
+          без консервантов, ароматизаторов, красителей. Используем в приготовлении сливочное масло 82,5%, без
+          дрожжей, маргарина, разрыхлителей и улучшителей муки.</p>
+      </div>
+      <div class="about__description-image">
+        <img src="assets/images/macaroon_big.png" class="about__description-img" alt="Пирожное">
+      </div>
+    </div>
+    <div class="about__advantages">
+      <advantage *ngFor="let advantage of advantages; let i = index;" [advantage]="advantage", [i]="i"></advantage>
+    </div>
+  </div>
+</section>
+
+<section class="order">
+  <div class="container">
+    <h2 class="description-title order__description-title" #choose>Выберите свой макарун</h2>
+    <div class="order__block">
+      <div class="order__item" *ngFor="let product of products">
+        <div class="order__item-img">
+          <img src="assets/images/{{product.image}}" alt="Product 1">
+        </div>
+        <div class="order__item-title">{{product.title}}</div>
+        <div class="order__item-info">
+          <div class="order__item-price">
+            <span class="info-extra">{{product.orderInfo.quantity}}</span>
+            <span class="info-extra">{{product.orderInfo.price}}</span>
+          </div>
+          <div class="btn order__btn" (click)="makeOrder(product, order)">Заказать</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="action">
+  <img src="assets/images/berry1.png" alt="Strawberry" class="strawberry1">
+  <img src="assets/images/berry2.png" alt="Strawberry" class="strawberry2">
+  <div class="container action__container">
+    <div class="action__image">
+      <img src="assets/images/macaron_action.png" alt="Macaroons" class="action__image-img">
+    </div>
+    <div class="action__form" #order>
+      <h2 class="description-title action__description-title">Закажите макарун!</h2>
+      <p class="action__form-offer">Выберите понравившийся макарун, заполните форму и ожидайте звонка нашего
+        пекаря!</p>
+      <form action="#" method="post">
+        <div>
+          <label class="action__form-label">
+            <span class="choice">Ваш выбор</span>
+            <input class="action__form-input" type="text" name="option"
+                   placeholder="Напишите, что хотите заказать..." [(ngModel)]="formValues.productTitle">
+
+          </label>
+        </div>
+        <div>
+          <label class="action__form-label">
+            <span class="choice">Заполните данные для заказа</span>
+            <input class="action__form-input" type="text" name="name" placeholder="Ваше имя"
+                   [(ngModel)]="formValues.customerName">
+            <input class="action__form-input" type="tel" name="phone" placeholder="+375 (__) ___ - __ - __"
+                   [(ngModel)]="formValues.phone">
+            <button class="btn form-btn">Оформить заказ</button>
+          </label>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</section>
+
+<button class="present">
+  <div class="present-text"> {{cartPrice.price}} руб.</div>
+  <div class="present-image">
+    <img src="assets/images/cart.png" alt="Present" class="present-img">
+  </div>
+  <div class="product-counter">{{cartService.count}}</div>
+</button>

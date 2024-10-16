@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Gilroy;
+  src: url("./assets/fonts/Gilroy-Regular.woff2");
+}
+
+@font-face {
+  font-family: GilroyMedium;
+  src: url("./assets/fonts/Gilroy-Medium.woff2");
+}
+
+@font-face {
+  font-family: GilroyBold;
+  src: url("./assets/fonts/Gilroy-Bold.woff2");
+}
+
+@font-face {
+  font-family: GilroyExtrabold;
+  src: url("./assets/fonts/Gilroy-Extrabold.woff2");
+}
+
+@font-face {
+  font-family: Tavolga;
+  src: url("./assets/fonts/tavolga-free.ttf");
+
+}
+
+body {
+  font-family: Gilroy, sans-serif;
+}
+
+.main {
+  background-color: #eba8b1;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media screen and (max-width: 1230px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
