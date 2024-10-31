@@ -43,8 +43,29 @@
   line-height: 1.333;
 }
 
+@media screen and (max-width: 1230px) {
+  .about__advantages {
+    grid-template-columns: repeat(2, fit-content(216px));
+    grid-template-rows: repeat(2, fit-content(269px));
+    margin: 0 auto;
+    justify-content: center;
+    column-gap: 56px;
+    row-gap: 97px;
+    max-width: 487px;
+  }
 
+  .about__advantages-item {
+    text-align: center;
+  }
 
+  .about__advantages-number {
+    margin: auto;
+  }
+
+  .about__advantages-number::before {
+    right: 0;
+  }
+}
 
 
 @media screen and (max-width: 767px) {

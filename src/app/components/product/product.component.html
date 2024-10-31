@@ -1,0 +1,14 @@
+<div class="order__item">
+  <div class="order__item-img">
+    <img src="assets/images/{{product.image}}" alt="Product 1">
+  </div>
+  <div class="order__item-title">{{product.title}}</div>
+  <div class="order__item-info">
+    <div class="order__item-price">
+      <span class="info-extra">{{product.orderInfo.quantity}}</span>
+      <span class="info-extra">{{product.orderInfo.price | number: '1.2-2'}}</span>
+    </div>
+    <div class="btn order__btn" (click)="addProductToCart()" buttonBackground>Заказать</div>
+  </div>
+</div>
+

@@ -11,7 +11,7 @@ import {CartPriceService} from "./services/cart-price.service";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
   public advantages: AdvantagesType[] = [
     {
@@ -33,8 +33,7 @@ export class AppComponent implements OnInit{
     },
   ];
   public products: ProductType[] = [];
-  public i: number = 0;
-  public price:number = 0;
+  public price: number = 0;
   public formValues: FormValuesType = {
     productTitle: '',
     customerName: '',
@@ -53,12 +52,15 @@ export class AppComponent implements OnInit{
     target.scrollIntoView({behavior: "smooth"});
   }
 
-  public makeOrder(product: ProductType, target: HTMLElement): void {
+  makeOrder(product: ProductType, target: HTMLElement): void {
     this.scrollTo(target);
     this.formValues.productTitle = product.title.toUpperCase();
-    this.cartService.count ++;
-     this.price = +(product.orderInfo.price.split(' ')[0]);
+    this.cartService.count++;
+    this.price = +(product.orderInfo.price.split(' ')[0]);
     this.cartPrice.price += this.price;
+    setTimeout(() => {
+      alert(this.formValues.productTitle + " добавлен в корзину!");
+    }, 650);
   }
 
 

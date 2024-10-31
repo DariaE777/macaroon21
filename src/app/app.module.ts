@@ -5,13 +5,19 @@ import { AppComponent } from './app.component';
 import {FormsModule} from "@angular/forms";
 import { FooterComponent } from './components/footer/footer.component';
 import { AdvantageComponent } from './components/advantage/advantage.component';
+import { ProductComponent } from './components/product/product.component';
+import { ButtonBackgroundDirective } from './directives/button-background.directive';
+import { PricePipe } from './pipes/price.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
-    AdvantageComponent
+    AdvantageComponent,
+    ProductComponent,
+    ButtonBackgroundDirective,
+    PricePipe
   ],
   imports: [
     BrowserModule,
