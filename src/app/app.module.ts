@@ -7,7 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AdvantageComponent } from './components/advantage/advantage.component';
 import { ProductComponent } from './components/product/product.component';
 import { ButtonBackgroundDirective } from './directives/button-background.directive';
-import { PricePipe } from './pipes/price.pipe';
+
 
 
 @NgModule({
@@ -16,8 +16,7 @@ import { PricePipe } from './pipes/price.pipe';
     FooterComponent,
     AdvantageComponent,
     ProductComponent,
-    ButtonBackgroundDirective,
-    PricePipe
+    ButtonBackgroundDirective
   ],
   imports: [
     BrowserModule,

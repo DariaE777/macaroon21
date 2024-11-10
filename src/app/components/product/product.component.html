@@ -6,7 +6,7 @@
   <div class="order__item-info">
     <div class="order__item-price">
       <span class="info-extra">{{product.orderInfo.quantity}}</span>
-      <span class="info-extra">{{product.orderInfo.price | number: '1.2-2'}}</span>
+      <span class="info-extra">{{product.orderInfo.price | currency:'1.2-2'}}</span>
     </div>
     <div class="btn order__btn" (click)="addProductToCart()" buttonBackground>Заказать</div>
   </div>

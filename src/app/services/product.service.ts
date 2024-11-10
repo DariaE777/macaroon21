@@ -15,7 +15,7 @@ export class ProductService {
         title: 'Макарун с малиной',
         orderInfo: {
           quantity: '1 шт.',
-          price: '1.70 руб.'
+          price: 1.70
         }
       },
       {
@@ -23,7 +23,7 @@ export class ProductService {
         title: 'Макарун с манго',
         orderInfo: {
           quantity: '1 шт.',
-          price: '1.70 руб.'
+          price: 1.70
         }
       },
       {
@@ -31,7 +31,7 @@ export class ProductService {
         title: 'Макарун с ванилью',
         orderInfo: {
           quantity: '1 шт.',
-          price: '1.70 руб.'
+          price: 1.70
         }
       },
       {
@@ -39,7 +39,7 @@ export class ProductService {
         title: 'Макарун с фисташками',
         orderInfo: {
           quantity: '1 шт.',
-          price: '1.70 руб.'
+          price: 1.70
         }
       },
     ]

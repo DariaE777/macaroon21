@@ -3,6 +3,6 @@ export type ProductType = {
   title: string,
   orderInfo: {
     quantity: string,
-    price: string
+    price: number
   }
 }
