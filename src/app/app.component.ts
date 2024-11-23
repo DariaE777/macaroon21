@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
     this.scrollTo(target);
     this.formValues.productTitle = product.title.toUpperCase();
     this.cartService.count++;
-    this.price = +(product.orderInfo.price.split(' ')[0]);
+    this.price = +(product.orderInfo.price);
     this.cartPrice.price += this.price;
     setTimeout(() => {
       alert(this.formValues.productTitle + " добавлен в корзину!");

@@ -16,7 +16,7 @@ export class ProductComponent implements OnInit {
       title: '',
       orderInfo: {
         quantity: '',
-        price: ''
+        price: 0
       }
     }
   }
